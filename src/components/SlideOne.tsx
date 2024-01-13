@@ -5,7 +5,7 @@ import { TypeAnimation } from 'react-type-animation'
 const SlideOne = () => {
   const [video, setVideo] = useState<string>('')
   const getVideo = async () => {
-    const res = await axios.get('/data/asset.json')
+    const res = await axios.get('../../data/asset.json')
     setVideo(res.data[0].video)
   }
   useEffect(() => {

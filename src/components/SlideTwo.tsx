@@ -15,7 +15,7 @@ const SlideTwo = () => {
   const [data, setData] = useState<TCard[]>([])
   const [image, setImage] = useState<string>('')
   const getImage = async () => {
-    const res = await axios.get('/data/asset.json')
+    const res = await axios.get('data/asset.json')
     setImage(res.data[0].image)
   }
 
