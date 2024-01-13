@@ -1,6 +1,6 @@
 [
   {
-    "video": "video/video.mp4",
-    "image": "images/globe.jpg"
+    "video": "public/video/video.mp4",
+    "image": "public/images/globe.jpg"
   }
 ]

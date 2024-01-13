@@ -16,7 +16,8 @@ const SlideOne = () => {
   useEffect(() => {
     getVideo()
   }, [])
-
+  console.log(video);
+  
   return (
     <>
       <main className='absolute inset-0 -z-10'>
