@@ -66,7 +66,7 @@ const SlideTwo = () => {
               } as CSSProperties
             }
           >
-            {data?.length > 0 &&
+            {data && 
               data.map(d => (
                 <SwiperSlide
                   key={d.title}
