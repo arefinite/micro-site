@@ -29,7 +29,7 @@ const SlideTwo = () => {
   useEffect(() => {
     getImage()
   }, [])
-  console.log(data)
+
 
   return (
     <>

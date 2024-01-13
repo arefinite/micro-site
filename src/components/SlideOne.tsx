@@ -1,12 +1,17 @@
-import axios from 'axios'
+import axios, { AxiosError } from 'axios'
 import { useEffect, useState } from 'react'
 import { TypeAnimation } from 'react-type-animation'
 
 const SlideOne = () => {
   const [video, setVideo] = useState<string>('')
   const getVideo = async () => {
-    const res = await axios.get('data/asset.json')
-    setVideo(res.data[0].video)
+    try {
+      const res = await axios.get('data/asset.json')
+      setVideo(res.data[0].video)
+    } catch (err: unknown) {
+      const error = err as AxiosError
+      throw new Error(error?.message)
+    }
   }
   useEffect(() => {
     getVideo()
